@@ -43,7 +43,7 @@ function decode(expr) {
     // write your solution here
     let res = expr.split('**********');
     return res = res
-        .map((word) => (
+        .map((word) => 
             word.match(reg1)
                 .map((letter) => {
                     let encoder = letter.match(reg2)
@@ -53,7 +53,7 @@ function decode(expr) {
                         }).join('');
                 return MORSE_TABLE[encoder];
             }).join('')
-        )).join(' ');
+        ).join(' ');
 }
 console.log(decode('00101010100000000010001011101000101110100000111111**********00001011110000111111000010111000101110100000111010')); 
 module.exports = {
